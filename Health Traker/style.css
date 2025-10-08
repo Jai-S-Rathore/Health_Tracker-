@@ -1,0 +1,34 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D1117; /* Dark background */
+    color: #C9D1D9; /* Light text */
+}
+.bg-custom-dark {
+    background-color: #161B22;
+}
+.border-custom-gray {
+    border-color: #30363D;
+}
+.text-custom-green {
+    color: #39D353;
+}
+.bg-custom-green {
+    background-color: #238636;
+}
+.bg-custom-green-hover:hover {
+    background-color: #2EA043;
+}
+.card-gradient {
+     background: linear-gradient(145deg, #1a202c, #2d3748);
+}
+.feature-icon {
+    background-color: rgba(57, 211, 83, 0.1);
+    color: #39D353;
+}
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+}
