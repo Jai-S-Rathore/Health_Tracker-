@@ -137,4 +137,59 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // --- LOGIN MODAL VARIABLES ---
+// Get references to all the HTML elements needed
+const getStartedBtn = document.getElementById('get-started-btn');
+const getStartedBtnHero = document.getElementById('get-started-btn-hero');
+const loginModal = document.getElementById('login-modal');
+const closeModalBtn = document.getElementById('close-modal-btn');
+const loginForm = document.getElementById('login-form');
+
+// --- HELPER FUNCTIONS ---
+
+// Function to make the modal visible
+function openModal() {
+    loginModal.classList.remove('hidden');
+    loginModal.classList.add('flex');
+}
+
+// Function to hide the modal
+function closeModal() {
+    loginModal.classList.add('hidden');
+    loginModal.classList.remove('flex');
+}
+
+// --- EVENT LISTENERS SETUP ---
+
+// This function sets up all the interactive triggers
+function setupEventListeners() {
+    // Modal Listeners
+    // Open the modal when "Get Started" buttons are clicked
+    getStartedBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+    getStartedBtnHero.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+
+    // Close the modal when the '×' button is clicked
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close the modal if the user clicks on the dark background
+    loginModal.addEventListener('click', (e) => { 
+        if (e.target === loginModal) {
+            closeModal(); 
+        }
+    });
+    
+    // Handle the form submission
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Stop the page from reloading
+        alert('Account created successfully! (Frontend Demonstration)');
+        loginForm.reset(); // Clear the form fields
+        closeModal(); // Close the modal
+    });
+
+    // ... other event listeners for the rest of the page
+}
+
+// The script finds and sets up these listeners when the page loads.
 });
+
