@@ -32,3 +32,37 @@ body {
 .animate-fade-in {
     animation: fade-in 0.3s ease-out;
 }
+/* Custom form input styles for username, email, password */
+.form-input {
+    width: 100%;
+    background-color: #374151; /* bg-gray-700 */
+    color: white;
+    padding: 0.75rem; /* p-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #4B5563; /* border-gray-600 */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Style for when a user clicks into an input field */
+.form-input:focus {
+    outline: none;
+    border-color: var(--custom-green);
+    box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.5);
+}
+
+/* Login Modal Animation */
+.modal-content {
+   animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); /* Starts slightly above its final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Ends in its final position */
+  }
+}
+
