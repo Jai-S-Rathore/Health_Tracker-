@@ -1,39 +1,55 @@
+/* Using Tailwind CSS for most styling, this file is for custom styles and components */
+
+/* Define custom colors and gradients for use in HTML */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0D1117; /* Dark background */
-    color: #C9D1D9; /* Light text */
-}
-.bg-custom-dark {
-    background-color: #161B22;
-}
-.border-custom-gray {
-    border-color: #30363D;
-}
-.text-custom-green {
-    color: #39D353;
-}
-.bg-custom-green {
-    background-color: #238636;
-}
-.bg-custom-green-hover:hover {
-    background-color: #2EA043;
-}
-.card-gradient {
-     background: linear-gradient(145deg, #1a202c, #2d3748);
-}
-.feature-icon {
-    background-color: rgba(57, 211, 83, 0.1);
-    color: #39D353;
-}
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-    animation: fade-in 0.3s ease-out;
+    background-color: #111827; /* bg-gray-900 */
 }
 
-/* Custom form input styles for username, email, password */
+:root {
+  --custom-dark: #111827;
+  --custom-gray: #374151;
+  --custom-green: #34D399;
+  --custom-green-hover: #10B981;
+}
+
+.bg-custom-dark {
+    background-color: var(--custom-dark);
+}
+.bg-custom-green {
+    background-color: var(--custom-green);
+}
+.bg-custom-green-hover:hover {
+    background-color: var(--custom-green-hover);
+}
+.text-custom-green {
+    color: var(--custom-green);
+}
+.border-custom-gray {
+    border-color: var(--custom-gray);
+}
+
+
+/* Custom card gradient */
+.card-gradient {
+    background: linear-gradient(145deg, #1f2937, #111827);
+    border: 1px solid var(--custom-gray);
+}
+
+.stat-card {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid var(--custom-gray);
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom form input styles */
 .form-input {
     width: 100%;
     background-color: #374151; /* bg-gray-700 */
@@ -44,14 +60,45 @@ body {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Style for when a user clicks into an input field */
 .form-input:focus {
     outline: none;
     border-color: var(--custom-green);
     box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.5);
 }
 
-/* Login Modal Animation */
+/* Animation for saved meals */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Water glass styles */
+.glass {
+    font-size: 3rem; /* text-5xl */
+    color: #4B5563; /* text-gray-600 */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.glass:hover {
+    transform: scale(1.1);
+}
+
+.glass.filled {
+    color: #3B82F6; /* text-blue-500 */
+}
+
+/* NEW: Login Modal Animation */
 .modal-content {
    animation: slideIn 0.3s ease-out forwards;
 }
@@ -59,10 +106,11 @@ body {
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-30px); /* Starts slightly above its final position */
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* Ends in its final position */
+    transform: translateY(0);
   }
 }
+
