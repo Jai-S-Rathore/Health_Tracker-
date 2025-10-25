@@ -14,18 +14,20 @@
     <!-- Header -->
     <header class="bg-custom-dark border-b border-custom-gray sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-heart-pulse text-custom-green text-2xl"></i>
-                <h1 class="text-xl font-bold text-white">HealthTracker</h1>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-heart-pulse text-custom-green text-3xl"></i>
+                <h1 class="text-2xl font-bold text-white">HealthTracker</h1>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#features" class="hover:text-custom-green transition">Features</a>
-                <a href="#how-it-works" class="hover:text-custom-green transition">How It Works</a>
-                <a href="#dashboard" class="hover:text-custom-green transition">Dashboard</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                <a href="#dashboard" class="text-gray-300 hover:text-white transition">Dashboard</a>
+                <a href="#meal-tracker" class="text-gray-300 hover:text-white transition">Tracker</a>
             </nav>
-            <button class="hidden md:block bg-custom-green text-white px-4 py-2 rounded-lg font-semibold bg-custom-green-hover transition">Get Started</button>
-            <button class="md:hidden text-white">
-                <i class="fas fa-bars text-2xl"></i>
+            <button id="get-started-btn" class="hidden md:block bg-custom-green text-white px-5 py-2 rounded-lg font-semibold hover:bg-custom-green-hover transition">
+                Get Started
+            </button>
+            <button class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
@@ -33,133 +35,70 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="py-20 px-6 text-center" style="background-image: url('https://placehold.co/1200x600/0D1117/C9D1D9?text=Health+Metrics'); background-size: cover; background-position: center;">
-             <div class="bg-black bg-opacity-60 py-20 rounded-lg">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Smart Tools for Managing Your Wellbeing</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Effortlessly monitor vital health data and stay motivated amidst a busy lifestyle. Unlock your health insights today.</p>
-                <button class="bg-custom-green text-white px-8 py-3 rounded-lg font-bold text-lg bg-custom-green-hover transition transform hover:scale-105">Start Your Journey</button>
+            
+        <section class="bg-cover bg-center text-white py-20 px-8" style="background-image: linear-gradient(rgba(13, 62, 22, 0.808), rgba(80, 113, 92, 0.8)), url('https://placehold.co/1600x800/111827/34D399?text=Health+ Matrix');background-size: cover; background-position: center;">
+            <div class="container mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-4">Unlock Your Health Potential</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Effortlessly monitor vital health data and stay motivated amidst a busy lifestyle.</p>
+                <a href="#" id="get-started-btn-hero" class="bg-custom-green text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-custom-green-hover transition inline-block">Start Tracking Today</a>
             </div>
         </section>
 
         <!-- Features Section -->
         <section id="features" class="py-20 bg-custom-dark">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-white">Unlock Health Insights with Smart Trackers</h3>
-                    <p class="text-md mt-2 max-w-2xl mx-auto">How our trackers empower you to maintain wellness effortlessly.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-heartbeat text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Monitor Vital Markers</h4>
-                        </div>
-                        <p>Continuously measure heart rate, steps, and calories burned, providing immediate feedback to support your daily activity goals.</p>
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold text-white mb-12">Smart Tools for Managing Your Wellbeing</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="card-gradient p-8 rounded-lg">
+                        <i class="fas fa-chart-line text-custom-green text-4xl mb-4"></i>
+                        <h4 class="font-bold text-xl text-white mb-2">Monitor Vitals</h4>
+                        <p class="text-gray-400">Continuously monitor markers like heart rate, steps, and calories burned in real-time.</p>
                     </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-history text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Track Historical Data</h4>
-                        </div>
-                        <p>Securely review past health trends over weeks or months, enabling pattern recognition and informed adjustments to your routines.</p>
+                    <!-- Feature Card 2 -->
+                    <div class="card-gradient p-8 rounded-lg">
+                        <i class="fas fa-bullseye text-custom-green text-4xl mb-4"></i>
+                        <h4 class="font-bold text-xl text-white mb-2">Set Personalised Goals</h4>
+                        <p class="text-gray-400">Custom alerts motivate you to stay on track and adapt habits for long-term success.</p>
                     </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-bullseye text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Set Personalised Goals</h4>
-                        </div>
-                        <p>Custom alerts motivate you to stay on track and adapt habits, enhancing long-term adherence to your wellness targets.</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-chart-line text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Analyse Trends</h4>
-                        </div>
-                        <p>Advanced analytics highlight areas for improvement, guiding you to optimise your health and lifestyle choices effectively.</p>
-                    </div>
-                    <!-- Feature 5 -->
-                    <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-shield-alt text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Data Privacy & Security</h4>
-                        </div>
-                        <p>Robust encryption and privacy controls protect sensitive health information, giving you confidence in your device's security.</p>
-                    </div>
-                    <!-- Feature 6 -->
-                     <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray card-gradient">
-                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="feature-icon p-3 rounded-full">
-                                <i class="fas fa-bell text-2xl"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold text-white">Timely Reminders</h4>
-                        </div>
-                        <p>Get notifications aligned with your progress and schedule to keep you on track without overwhelming your day.</p>
+                    <!-- Feature Card 3 -->
+                    <div class="card-gradient p-8 rounded-lg">
+                        <i class="fas fa-file-alt text-custom-green text-4xl mb-4"></i>
+                        <h4 class="font-bold text-xl text-white mb-2">Get Detailed Reports</h4>
+                        <p class="text-gray-400">Review weekly or monthly summaries to understand how your lifestyle choices impact health.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- How It Works Section -->
-        <section id="how-it-works" class="py-20">
-            <div class="container mx-auto px-6">
-                 <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-white">Key Components Powering Your Health Tracker</h3>
-                    <p class="text-md mt-2 max-w-2xl mx-auto">Discover how each module transforms raw data into actionable health insights for daily use.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+        <section id="how-it-works" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold text-white mb-16">Key Components Powering Your Tracker</h3>
+                <div class="flex flex-wrap justify-center gap-10 md:gap-20">
                     <!-- Component 1 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 bg-custom-dark border-2 border-custom-green rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-microchip text-custom-green text-4xl"></i>
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-gray-800 border-2 border-custom-gray w-24 h-24 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-satellite-dish text-custom-green text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-white">Data Collection</h4>
-                        <p class="text-sm">Employs sensors to accurately capture heart rate, steps, and calories burned.</p>
+                        <h4 class="font-bold text-xl text-white mb-2">Data Collection</h4>
+                        <p class="text-gray-400">Sensors accurately capture heart rate, step count, and calories burned.</p>
                     </div>
                     <!-- Component 2 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 bg-custom-dark border-2 border-custom-green rounded-full flex items-center justify-center mb-4">
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-gray-800 border-2 border-custom-gray w-24 h-24 rounded-full flex items-center justify-center mb-4">
                             <i class="fas fa-database text-custom-green text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-white">Data Storage</h4>
-                        <p class="text-sm">Securely retains all collected health data over time for comprehensive trend analysis.</p>
+                        <h4 class="font-bold text-xl text-white mb-2">Data Storage</h4>
+                        <p class="text-gray-400">Securely retains all collected health data over time for trend analysis.</p>
                     </div>
                     <!-- Component 3 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 bg-custom-dark border-2 border-custom-green rounded-full flex items-center justify-center mb-4">
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-gray-800 border-2 border-custom-gray w-24 h-24 rounded-full flex items-center justify-center mb-4">
                             <i class="fas fa-brain text-custom-green text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-white">Analytics</h4>
-                        <p class="text-sm">Processes stored data to identify meaningful patterns and measure progress.</p>
-                    </div>
-                    <!-- Component 4 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 bg-custom-dark border-2 border-custom-green rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-desktop text-custom-green text-4xl"></i>
-                        </div>
-                        <h4 class="font-bold text-lg text-white">User Interface</h4>
-                        <p class="text-sm">Displays intuitive graphs and detailed reports for clear data visualisation.</p>
-                    </div>
-                    <!-- Component 5 -->
-                     <div class="flex flex-col items-center">
-                        <div class="w-24 h-24 bg-custom-dark border-2 border-custom-green rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-file-alt text-custom-green text-4xl"></i>
-                        </div>
-                        <h4 class="font-bold text-lg text-white">Reporting</h4>
-                        <p class="text-sm">Creates visual summaries and timely notifications to keep you informed.</p>
+                        <h4 class="font-bold text-xl text-white mb-2">Analytics Module</h4>
+                        <p class="text-gray-400">Processes stored data to identify meaningful patterns and measure progress.</p>
                     </div>
                 </div>
             </div>
@@ -170,68 +109,78 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-white">Your Personal Health Dashboard</h3>
-                    <p class="text-md mt-2 max-w-2xl mx-auto">A glimpse into how your daily progress will be visualized.</p>
+                    <p class="text-md text-gray-400 mt-2">A clear and intuitive visualization of your daily progress.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg border border-custom-gray shadow-lg">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Stat Card 1: Heart Rate -->
-                        <div class="bg-gray-700 p-6 rounded-lg">
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="text-lg font-semibold text-white">Heart Rate</h4>
-                                <i class="fas fa-heart-pulse text-red-500 text-2xl"></i>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Stat Card: Heart Rate -->
+                    <div class="stat-card">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-heartbeat text-red-500 text-3xl"></i>
+                            <div>
+                                <p class="text-gray-400">Heart Rate</p>
+                                <p class="text-2xl font-bold text-white">72 <span class="text-base font-normal">bpm</span></p>
                             </div>
-                            <p class="text-4xl font-bold text-white">72 <span class="text-lg font-normal">bpm</span></p>
-                             <p class="text-sm text-gray-400 mt-1">Resting</p>
-                        </div>
-                        <!-- Stat Card 2: Steps -->
-                        <div class="bg-gray-700 p-6 rounded-lg">
-                             <div class="flex items-center justify-between mb-2">
-                                <h4 class="text-lg font-semibold text-white">Steps</h4>
-                                <i class="fas fa-walking text-blue-400 text-2xl"></i>
-                            </div>
-                            <p class="text-4xl font-bold text-white">8,452</p>
-                             <p class="text-sm text-gray-400 mt-1">Goal: 10,000</p>
-                        </div>
-                        <!-- Stat Card 3: Calories -->
-                        <div class="bg-gray-700 p-6 rounded-lg">
-                             <div class="flex items-center justify-between mb-2">
-                                <h4 class="text-lg font-semibold text-white">Calories Burned</h4>
-                                <i class="fas fa-fire text-orange-500 text-2xl"></i>
-                            </div>
-                            <p class="text-4xl font-bold text-white">1,230</p>
-                             <p class="text-sm text-gray-400 mt-1">Active Calories</p>
                         </div>
                     </div>
-                    <div class="mt-8">
-                         <h4 class="text-xl font-semibold text-white mb-4">Weekly Activity</h4>
-                         <!-- Placeholder for a chart -->
-                         <div class="bg-gray-700 h-64 rounded-lg flex items-center justify-center">
-                            <p class="text-gray-400">Activity chart will be displayed here.</p>
-                         </div>
+                    <!-- Stat Card: Steps -->
+                    <div class="stat-card">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-walking text-blue-500 text-3xl"></i>
+                            <div>
+                                <p class="text-gray-400">Steps</p>
+                                <p class="text-2xl font-bold text-white">4,521</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Card: Calories -->
+                    <div class="stat-card">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-fire text-orange-500 text-3xl"></i>
+                            <div>
+                                <p class="text-gray-400">Calories Burned</p>
+                                <p class="text-2xl font-bold text-white">1,204 <span class="text-base font-normal">kcal</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-custom-gray shadow-lg mt-8 text-center">
+                    <h4 class="text-xl font-semibold text-white mb-4">Weekly Progress</h4>
+                    <div class="bg-gray-700 h-64 rounded-lg flex items-center justify-center">
+                        <p class="text-gray-400">Chart Visualization Coming Soon</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Meal Tracker Section -->
-        <section id="meal-tracker" class="py-20">
+        <section id="meal-tracker" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-white">Track Your Daily Calorie Intake</h3>
-                    <p class="text-md mt-2 max-w-2xl mx-auto">Log your meals to stay on top of your nutritional goals.</p>
+                    <p class="text-md text-gray-400 mt-2 max-w-2xl mx-auto">Log your meals to stay on top of your nutritional goals. Your data is saved automatically.</p>
                 </div>
                 <div class="bg-gray-800 p-8 rounded-lg border border-custom-gray shadow-lg max-w-4xl mx-auto">
                     <!-- Add Meal Form -->
                     <div id="add-meal-form" class="mb-8">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                            <input type="text" id="meal-name" placeholder="Meal Name (e.g., Lunch)" class="md:col-span-3 bg-gray-700 text-white p-3 rounded-lg border border-custom-gray focus:outline-none focus:ring-2 focus:ring-custom-green" required>
-                            
-                            <select id="food-item" class="bg-gray-700 text-white p-3 rounded-lg border border-custom-gray focus:outline-none focus:ring-2 focus:ring-custom-green">
-                                <option value="">-- Select Food Item --</option>
-                                <!-- Options will be added by JS -->
-                            </select>
-                            <input type="number" id="food-quantity" placeholder="Quantity" class="bg-gray-700 text-white p-3 rounded-lg border border-custom-gray focus:outline-none focus:ring-2 focus:ring-custom-green" min="1">
-                            <button id="add-food-item-btn" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Add Item to Meal</button>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 items-end">
+                            <div class="md:col-span-4">
+                                <label for="meal-name" class="block text-sm font-medium text-gray-300 mb-1">Meal Name</label>
+                                <input type="text" id="meal-name" placeholder="e.g., Lunch" class="form-input" required>
+                            </div>
+                             <div>
+                                <label for="food-item" class="block text-sm font-medium text-gray-300 mb-1">Food Item</label>
+                                <select id="food-item" class="form-input">
+                                    <option value="">-- Select --</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="food-quantity" class="block text-sm font-medium text-gray-300 mb-1">Quantity</label>
+                                <input type="number" id="food-quantity" placeholder="e.g., 2" class="form-input" min="1">
+                            </div>
+                             <div id="unit-display" class="text-gray-400 self-center pb-2 pl-2">
+                                <p class="text-sm">Unit</p>
+                            </div>
+                            <button id="add-food-item-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition h-10">Add Item</button>
                         </div>
 
                         <div class="bg-gray-900 p-4 rounded-lg mb-4">
@@ -243,14 +192,17 @@
                              </div>
                         </div>
 
-                        <button id="save-meal-btn" class="w-full bg-custom-green text-white px-6 py-3 rounded-lg font-semibold bg-custom-green-hover transition">Save Meal</button>
+                        <button id="save-meal-btn" class="w-full bg-custom-green text-white px-6 py-3 rounded-lg font-semibold bg-custom-green-hover transition">Save Meal to Daily Log</button>
                     </div>
 
                     <!-- Meal List -->
                     <div>
-                        <h4 class="text-xl font-semibold text-white mb-4">Today's Meals</h4>
+                        <div class="flex justify-between items-center mb-4">
+                             <h4 class="text-xl font-semibold text-white">Today's Meals</h4>
+                             <button id="clear-meals-btn" class="text-sm text-red-500 hover:text-red-400 transition"><i class="fas fa-trash-alt mr-1"></i> Clear All</button>
+                        </div>
                         <ul id="meal-list" class="space-y-3">
-                            <!-- Meals will be added here by JS -->
+                            <!-- Meals will be added here -->
                         </ul>
                         <div class="border-t border-custom-gray mt-6 pt-4 flex justify-between items-center">
                             <h4 class="text-xl font-bold text-white">Total Daily Calories</h4>
@@ -260,47 +212,72 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Water Tracker Section -->
+        <section id="water-tracker" class="py-20 bg-custom-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-white">Track Your Hydration</h3>
+                    <p class="text-md text-gray-400 mt-2 max-w-2xl mx-auto">Click a glass to add it to your daily total. Each glass is 250ml.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg border border-custom-gray shadow-lg max-w-4xl mx-auto">
+                    <div class="flex flex-wrap justify-center gap-4" id="glass-container">
+                        <!-- Glasses will be added here by JS -->
+                    </div>
+                    <div class="border-t border-custom-gray mt-8 pt-4 flex justify-between items-center">
+                        <h4 class="text-xl font-bold text-white">Total Daily Water</h4>
+                        <p id="total-water" class="text-3xl font-bold text-custom-green">0 ml</p>
+                    </div>
+                     <button id="clear-water-btn" class="w-full mt-6 bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition">Reset Water</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-custom-dark border-t border-custom-gray">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2025 HealthTracker. All rights reserved.</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+            <div class="mb-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-3 transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3 transition"><i class="fab fa-instagram"></i></a>
             </div>
+            <p>&copy; 2025 HealthTracker. All Rights Reserved.</p>
         </div>
     </footer>
-
+    
     <!-- Login Modal -->
-<div id="login-modal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4">
-    <div class="bg-gray-800 p-8 rounded-lg border border-custom-gray shadow-lg max-w-sm w-full relative modal-content">
-        <button id="close-modal-btn" class="absolute top-3 right-4 text-gray-400 hover:text-white text-3xl font-light">&times;</button>
-        <h3 class="text-2xl font-bold text-white text-center mb-6">Create Account</h3>
-        <form id="login-form">
-            <div class="space-y-4">
-                <div>
-                    <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Username</label>
-                    <input type="text" id="username" name="username" class="form-input" placeholder="Choose a username" required>
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4">
+        <div class="bg-gray-800 p-8 rounded-lg border border-custom-gray shadow-lg max-w-sm w-full relative modal-content">
+            <button id="close-modal-btn" class="absolute top-3 right-4 text-gray-400 hover:text-white text-3xl font-light">&times;</button>
+            <h3 class="text-2xl font-bold text-white text-center mb-6">Create Account</h3>
+            <form id="login-form">
+                <div class="space-y-4">
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-300 mb-1">Username</label>
+                        <input type="text" id="username" name="username" class="form-input" placeholder="Choose a username" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
-                </div>
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
-                    <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
-                </div>
+                <button type="submit" class="w-full mt-6 bg-custom-green text-white px-6 py-3 rounded-lg font-semibold bg-custom-green-hover transition">Sign Up</button>
+            </form>
+            <div class="text-center mt-4">
+                <p class="text-sm text-gray-400">Already have an account? <a href="#" class="font-medium text-custom-green hover:underline">Log In</a></p>
             </div>
-            <button type="submit" class="w-full mt-6 bg-custom-green text-white px-6 py-3 rounded-lg font-semibold bg-custom-green-hover transition">Sign Up</button>
-        </form>
+        </div>
     </div>
-</div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
